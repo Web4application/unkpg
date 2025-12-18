@@ -7,7 +7,7 @@ Author:  kubulee kubulee.kl@gmail.com
 
 
 
->---
+---
 >Description:  Sur.ly alters the outbound links on your site so that visitors can view external target pages without leaving your domain.
 <---
 
