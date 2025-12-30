@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web4 Landing Page</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      margin: 0;
+      line-height: 1.6;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(90deg, #0f0f1a, #1a1a2e);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #a0a0a0;
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffff;
+      text-align: center;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      background: #1a1a2e;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-left: 5px solid #00ffff;
+      transition: all 0.3s ease;
+    }
+    section ul li:hover {
+      background: #272746;
+      transform: translateX(5px);
+    }
+
+    /* Image */
+    .logo {
+      display: block;
+      margin: 0 auto 30px;
+      width: 120px;
+      height: auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #1a1a2e;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/web4-icon.png" alt="Web4 Icon" class="logo">
+    <h1>Welcome to Web4</h1>
+    <p>The intelligent, immersive, and human-centric web</p>
+  </header>
+
+  <!-- What is Web4 -->
+  <section>
+    <h2>What is Web4?</h2>
+    <p>Web4 is the next evolutionary stage of the internet beyond Web3. While Web3 focuses on decentralization, blockchain, and user ownership, Web4 is all about hyper-connected intelligence, seamless integration of AI, IoT, and immersive experiences, and human-centered digital ecosystems. Think of it as the internet becoming smart, adaptive, and deeply personal.</p>
+  </section>
+
+  <!-- Key Principles -->
+  <section>
+    <h2>Key Principles of Web4</h2>
+    <ul>
+      <li><strong>Intelligent Web:</strong> AI and machine learning are embedded natively into the web, enabling smart recommendations, automation, and predictive services. Every website, app, and service can adapt in real-time to user behavior.</li>
+      <li><strong>Decentralization Evolved:</strong> Beyond blockchain: distributed computing, peer-to-peer networks, and decentralized AI systems reduce reliance on centralized servers.</li>
+      <li><strong>Immersive & Multi-Sensory:</strong> Full integration with AR/VR/MR for mixed reality experiences. Users can interact with digital content as if it’s part of the physical world.</li>
+      <li><strong>Interoperability & Universal Access:</strong> Apps and data seamlessly work across devices, platforms, and ecosystems. Data portability is standard: your digital identity, assets, and preferences move with you securely.</li>
+      <li><strong>Human-Centric Design:</strong> Privacy, ethics, and sustainability are baked in. AI respects consent, transparency, and fairness.</li>
+      <li><strong>Hyper-Personalization:</strong> Web4 understands context, emotion, and environment. Personalized experiences, recommendations, and interfaces are dynamic and real-time.</li>
+      <li><strong>Edge & IoT Integration:</strong> Internet of Things + Edge Computing = real-time, local intelligence. Your devices communicate and make decisions without always needing a central server.</li>
+    </ul>
+  </section>
+
+  <!-- Why Web4 Matters -->
+  <section>
+    <h2>Why Web4 Matters</h2>
+    <ul>
+      <li>Smarter Interactions: Every app, website, or device anticipates your needs.</li>
+      <li>True Digital Ownership: Your data, identity, and digital assets belong to you, not just corporations.</li>
+      <li>Immersive Experiences: Education, shopping, socializing—all in mixed reality, AI-powered.</li>
+      <li>Seamless Ecosystem: Everything is connected; friction is minimized.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Learn more about the <a href="https://www.web4.org/en-US/about/manifesto/">Web4 Manifesto</a></p>
+  </footer>
+
+</body>
+</html>

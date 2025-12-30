@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Qubuhub – Web4 Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Qubuhub – React + Web4 infrastructure" />
+  <link rel="icon" href="./web4.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, #0f0f1a, #1a1a2e);
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #a0a0a0;
+    }
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    section h2 {
+      color: #00ffff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      background: #1a1a2e;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-left: 5px solid #00ffff;
+      transition: transform 0.3s, background 0.3s;
+    }
+    section ul li:hover {
+      background: #272746;
+      transform: translateX(5px);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #1a1a2e;
+      color: #888;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <script>
+    const e = React.createElement;
+
+    const sections = [
+      {
+        title: "What is Web4?",
+        content: "Web4 is the next evolutionary stage of the internet beyond Web3. While Web3 focuses on decentralization, blockchain, and user ownership, Web4 is all about hyper-connected intelligence, seamless integration of AI, IoT, and immersive experiences, and human-centered digital ecosystems. Think of it as the internet becoming smart, adaptive, and deeply personal."
+      },
+      {
+        title: "Key Principles of Web4",
+        list: [
+          "Intelligent Web: AI and machine learning are embedded natively into the web, enabling smart recommendations, automation, and predictive services.",
+          "Decentralization Evolved: Beyond blockchain: distributed computing, peer-to-peer networks, and decentralized AI systems reduce reliance on centralized servers.",
+          "Immersive & Multi-Sensory: Full integration with AR/VR/MR for mixed reality experiences. Users can interact with digital content as if it’s part of the physical world.",
+          "Interoperability & Universal Access: Apps and data seamlessly work across devices, platforms, and ecosystems. Data portability is standard: your digital identity, assets, and preferences move with you securely.",
+          "Human-Centric Design: Privacy, ethics, and sustainability are baked in. AI respects consent, transparency, and fairness.",
+          "Hyper-Personalization: Web4 understands context, emotion, and environment. Personalized experiences, recommendations, and interfaces are dynamic and real-time.",
+          "Edge & IoT Integration: Internet of Things + Edge Computing = real-time, local intelligence. Your devices communicate and make decisions without always needing a central server."
+        ]
+      },
+      {
+        title: "Why Web4 Matters",
+        list: [
+          "Smarter Interactions: Every app, website, or device anticipates your needs.",
+          "True Digital Ownership: Your data, identity, and digital assets belong to you, not just corporations.",
+          "Immersive Experiences: Education, shopping, socializing—all in mixed reality, AI-powered.",
+          "Seamless Ecosystem: Everything is connected; friction is minimized."
+        ]
+      }
+    ];
+
+    const App = () => {
+      return e('div', null,
+        // Header
+        e('header', null,
+          e('h1', null, '🌍 Welcome to Qubuhub'),
+          e('p', null, 'Decentralized AI + React UI via .min.js')
+        ),
+        // Sections
+        ...sections.map((sec, idx) => 
+          e('section', { key: idx, className: 'fade-in', style: { animationDelay: `${idx * 0.3}s` } },
+            e('h2', null, sec.title),
+            sec.content ? e('p', null, sec.content) : null,
+            sec.list ? e('ul', null, sec.list.map((item, i) => e('li', { key: i }, item))) : null
+          )
+        ),
+        // Footer
+        e('footer', null,
+          e('p', null,
+            "Learn more about the ", 
+            e('a', { href: 'https://www.web4.org/en-US/about/manifesto/' }, 'Web4 Manifesto')
+          )
+        )
+      );
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(e(App));
+  </script>
+</body>
+</html>
