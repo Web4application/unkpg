@@ -25,7 +25,7 @@
       </properties>
       <provides size='2'>
         <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.tm4e.feature.feature.group' version='0.5.3.202303141648'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/> 
       </provides>
       <requires size='6'>
         <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.tm4e.core' range='[0.5.2.202303141648,0.5.2.202303141648]'/>
