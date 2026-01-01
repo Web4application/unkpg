@@ -1,0 +1,16 @@
+{
+  "name": "web-standards-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy && npx pagefind --site _site",
+    "lighthouse": "npx lhci autorun"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@lhci/cli": "^0.13.0",
+    "pagefind": "^1.0.0"
+  }
+}
