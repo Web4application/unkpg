@@ -1,4 +1,4 @@
-define_syslog_variables();
+//define_syslog_variables();
 // open syslog, include the process ID and also send
 // the log to standard error, and use a user defined
 // logging mechanism
