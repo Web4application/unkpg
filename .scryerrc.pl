@@ -12,4 +12,4 @@
 :- use_module(library(ordsets)).
 :- use_module(library(pio)).
 :- use_module(library(reif)).
-:- use_module(library(time)).
+:- use_module(library(time))
