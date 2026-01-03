@@ -1,0 +1,116 @@
+! -------------------------------------------------------------------
+! SshAskpass.ad — Future-resilient X11 resource configuration
+!
+! Purpose:
+!   Controls appearance and behavior of the OpenSSH ssh-askpass dialog
+!
+! Compatibility:
+!   X11 (legacy + modern), OpenSSH askpass implementations
+!
+! Design philosophy:
+!   - DPI aware
+!   - Minimal assumptions about fonts
+!   - Explicit security posture
+!   - Safe defaults, overridable by user resources
+! -------------------------------------------------------------------
+
+! =========================
+! Global appearance
+! =========================
+
+*foreground:              #000000
+*background:              #d0d0d0
+*borderColor:             #202020
+*topShadowColor:          #ffffff
+*bottomShadowColor:       #808080
+
+*borderWidth:             1
+*shadowThickness:         2
+*horizontalSpacing:       6
+*verticalSpacing:         6
+
+
+! =========================
+! Font strategy
+!
+! Avoid hard dependency on obsolete XLFD fonts.
+! Allow system font substitution where supported.
+! =========================
+
+*Dialog.font:             -*-sans-serif-bold-*-*-*-14-*-*-*-*-*-*
+*Dialog.fixedFont:       -*-monospace-bold-*-*-*-14-*-*-*-*-*-*
+*Button.font:             -*-sans-serif-bold-*-*-*-13-*-*-*-*-*-*
+
+
+! =========================
+! Buttons
+! =========================
+
+*Button.borderWidth:      1
+*Button.shadowThickness:  2
+*Button.horizontalSpacing: 6
+*Button.verticalSpacing:   3
+
+
+! =========================
+! Passphrase indicator
+!
+! Obfuscates true passphrase length
+! =========================
+
+*Indicator.foreground:    #9acd9b
+*Indicator.background:    #000080
+*Indicator.borderWidth:   0
+*Indicator.shadowThickness: 1
+
+*Indicator.height:        8
+*Indicator.width:         16
+*Indicator.horizontalSpacing: 2
+*Indicator.verticalSpacing:   4
+
+*Indicator.minimumCount:  8
+*Indicator.maximumCount:  24
+
+
+! =========================
+! DPI handling
+!
+! X11 lacks true DPI independence.
+! These values allow scaling within sane bounds.
+! =========================
+
+*defaultXResolution:      96/in
+*defaultYResolution:      96/in
+*xResolutionFuzz:         24/in
+*yResolutionFuzz:         24/in
+
+
+! =========================
+! Input behavior
+!
+! Security-first defaults:
+! - No timeout
+! - Keyboard grabbed
+! =========================
+
+*inputTimeout:            0
+*grabKeyboard:            true
+!*grabPointer:            true
+!*grabServer:             true
+
+
+! =========================
+! Dialog text
+!
+! Keep wording explicit and unambiguous
+! =========================
+
+*Dialog.title:            OpenSSH Authentication Required
+*Dialog.label:            Enter your SSH key passphrase:
+*okButton.label:          Unlock
+*cancelButton.label:      Cancel
+
+
+! =========================
+! End of file
+! =========================
