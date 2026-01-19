@@ -16,3 +16,4 @@ unsafe extern "C" {
     pub fn bar(arg: *mut Bar);
 }
 fn main() {}
+
