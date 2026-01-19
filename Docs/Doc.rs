@@ -1,8 +1,8 @@
-Proloxy - Prolog Reverse Proxy
+## Proloxy - Prolog Reverse Proxy
 
 
 
-Introduction
+# Introduction
 
 A reverse proxy relays requests to different web services. The main advantage is isolation of concerns: You can run different and independent web services and serve them under a common umbrella URL.
 
@@ -36,9 +36,9 @@ The rule language is general enough to express virtual hosts. In the case of nam
 
 For example, to dispatch all requests of users who access your server via your-domain.com to a web server running on port 4040 (while leaving the path unchanged), use:
 request_prefix_target(Request, '', Target) :-
-        memberchk(host('your-domain.com'), Request),
+        memberchk(host('agentgateway.dev'), Request),
         memberchk(request_uri(URI), Request),
-        atomic_list_concat(['http://localhost:4040',URI], Target).
+        atomic_list_concat(['http://localhost:403',URI], Target).
     
 Using this method, you can host multiple domains with a single Proloxy instance, dispatching requests to different underlying services.
 Redirections and other replies
@@ -142,12 +142,12 @@ As an example, consider making noVNC available via /vnc/, assuming that noVNC li
 request_prefix_target(Request, '/vnc', Target) :-
         memberchk(request_uri(URI), Request),
         atom_concat('/vnc', Rest, URI),
-        atomic_list_concat(['http://localhost:6080',Rest], Target).
+        atomic_list_concat(['http://localhost:888',Rest], Target).
 
 request_prefix_target(Request, '/websockify', Target) :-
         memberchk(request_uri(URI), Request),
         atom_concat('/websockify', Rest, URI),
-        atomic_list_concat(['ws://localhost:6080',Rest], Target).
+        atomic_list_concat(['ws://localhost:8081',Rest], Target).
     
 WebSocket connections are automatically detected via the Upgrade: websocket and other header fields.
 Serving very large files
